@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    {% load  static %}
+    {% static "img" as baseUrl %}
+    <link rel="stylesheet" href="{% static 'home.css'%}">
+</head>
+<body> 
+    <header>
+        <nav class="navbar">
+            <a href=""><img src="{% static 'img/logo.png'%}" alt="" class="logo"></a>
+            <ul>
+                <li>
+                    <a id="active" href="">Home</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="account/cart">Cart</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li>
+                    <a href="account/logout">Logout</a>
+                </li>
+                <li>
+                    <a>Hello {{user.username}}</a>
+                </li>
+
+                {% else %}
+                <li>
+                    <a href="account/register">register</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <h4>Trade-in-offer</h4>
+        <h2>Super value deals</h2>
+        <h1>On all products</h1>
+        <p>Save more with coupons & upto 45% off!</p>
+        <button>Shop now</button>
+    </section>
+    <section id="feature" class="section-p1">
+        {% for i in feats %}
+        <div class="fe-box">
+            <img src="{{baseUrl}}/{{i.img}}" alt="">
+            <h6>{{i.h}}</h6>
+        </div>
+        {% endfor %}
+    </section>
+    <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>Summer Collection New Mordern Design</p>
+        <form action="#" method="post">
+        <div class="pro-container">
+            {% csrf_token%}
+            {% for j in pros %}
+            <div class="pro">
+                <img src="{{baseUrl}}/{{j.img}}" alt="">
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5 value="{{j.Tshirt}}" name="tshirt" >{{j.Tshirt}}</h5>
+                    <h4 value="{{j.price}}" name="price">Rs.{{j.price}}/-</h4>
+                    <button type="submit">Add to cart </button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </form>
+    
+
+    </section>
+</body>
+</html>

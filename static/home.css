@@ -1,0 +1,194 @@
+body{
+    width: 100%;
+    margin: 0;
+}
+.logo{
+    padding: 10px 10px;
+    margin: 10px;
+}
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.navbar{
+    display: flex;
+    border-radius: 10px;
+    background-color: rgb(231, 228, 233);
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 5px 16px rgb(196, 171, 221);
+    z-index: 999;
+
+    
+}
+.navbar li{
+    float: left;
+    list-style: none;
+    margin: 20px;
+}
+
+.navbar li a{
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(88, 47, 47);
+    transition: 0.3s ease;
+}
+#active{
+    color:rgb(136, 32, 240)
+}
+.navbar li a:hover{
+    color:rgb(136, 32, 240)
+}
+
+#hero h4{
+    margin: 0;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(195, 118, 118);
+}
+#hero h1{
+    margin: 0;
+    font-size: 45px;
+    font-weight: 600;
+    color:rgb(119, 75, 164)
+}
+#hero h2{
+    margin: 0;
+    font-size: 35px;
+    font-weight: 600;
+}
+#hero p{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+} 
+#hero button{
+    background-image: url('img/button.png');
+    background-color: transparent;
+    border: 0;
+    color: rgb(127, 155, 255);
+    padding: 14px 80px 14px 65px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#hero{
+    background-image: url("img/hero4.png");
+    height: 90vh;
+    background-position: top 25% right 0;
+    background-size: cover;
+    padding:0 160px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+#feature .fe-box{
+    width: 160px;
+    text-align: center;
+    padding: 15px 10px;
+    box-shadow: 10px 10px 24px rgb(217, 216, 219);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+#feature .fe-box:hover{
+    background-color: rgb(241, 236, 241);
+}
+#feature .fe-box h6{
+display: inline-block;
+font-size: 15px;
+font-weight: 400;
+padding: 5px;
+margin: 15px;
+border-radius: 5px;
+color: rgb(16, 15, 15);
+background-color: rgb(255, 207, 207);
+
+}
+.section-p1{
+    padding: 20px 60px;
+}
+
+#product1{
+    text-align: center;
+}
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+#product1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 15px;
+    border: 1px solid rgb(208, 200, 200);
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgb(197, 193, 193);
+    margin: 15px 0;
+    transition: 0.2s ease;
+
+}
+#product1 .pro:hover{
+    box-shadow: 10px 10px 15px rgb(185, 170, 170);
+}
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+#product1 .pro .des{
+    text-align:start;
+    padding: 10px 0;
+}
+#product1 .pro .des span{
+    color: rgb(171, 138, 238);
+    font-size: 17px;
+}
+#product1 .pro .des h5{
+    color: rgb(25, 25, 25);
+    margin: 5px 0;
+    font-size: 17px;
+}
+#product1 .pro .des h4{
+    color: rgb(25, 25, 25);
+    margin: 5px 0;
+    font-size: 15px;
+}
+#product1 .pro .des button{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(200, 43, 43);
+    transition: 0.3s ease;
+}
+#product1 .pro .des button:hover{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(151, 73, 228);
+    padding: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(226, 93, 93);
+    transition: 0.3s ease;
+}
+
